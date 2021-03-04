@@ -29,6 +29,7 @@ namespace PlatformGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtScore = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -36,9 +37,9 @@ namespace PlatformGame
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.horizontalPlatform = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.verticalPlatform = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.enemyOne = new System.Windows.Forms.PictureBox();
@@ -64,15 +65,16 @@ namespace PlatformGame
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).BeginInit();
@@ -177,16 +179,16 @@ namespace PlatformGame
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "platform";
             // 
-            // pictureBox7
+            // horizontalPlatform
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox7.Location = new System.Drawing.Point(257, 175);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(178, 23);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Tag = "platform";
+            this.horizontalPlatform.BackColor = System.Drawing.Color.Maroon;
+            this.horizontalPlatform.Location = new System.Drawing.Point(257, 175);
+            this.horizontalPlatform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horizontalPlatform.Name = "horizontalPlatform";
+            this.horizontalPlatform.Size = new System.Drawing.Size(178, 23);
+            this.horizontalPlatform.TabIndex = 7;
+            this.horizontalPlatform.TabStop = false;
+            this.horizontalPlatform.Tag = "platform";
             // 
             // pictureBox8
             // 
@@ -199,16 +201,16 @@ namespace PlatformGame
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "platform";
             // 
-            // pictureBox9
+            // verticalPlatform
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox9.Location = new System.Drawing.Point(507, 621);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(76, 23);
-            this.pictureBox9.TabIndex = 9;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Tag = "platform";
+            this.verticalPlatform.BackColor = System.Drawing.Color.Maroon;
+            this.verticalPlatform.Location = new System.Drawing.Point(507, 621);
+            this.verticalPlatform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.verticalPlatform.Name = "verticalPlatform";
+            this.verticalPlatform.Size = new System.Drawing.Size(76, 23);
+            this.verticalPlatform.TabIndex = 9;
+            this.verticalPlatform.TabStop = false;
+            this.verticalPlatform.Tag = "platform";
             // 
             // player
             // 
@@ -483,6 +485,12 @@ namespace PlatformGame
             this.pictureBox31.TabStop = false;
             this.pictureBox31.Tag = "coin";
             // 
+            // gameTimer
+            // 
+            this.gameTimer.Enabled = true;
+            this.gameTimer.Interval = 20;
+            this.gameTimer.Tick += new System.EventHandler(this.MainGameTimerEvent);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,9 +522,9 @@ namespace PlatformGame
             this.Controls.Add(this.enemyOne);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.player);
-            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.verticalPlatform);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.horizontalPlatform);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -535,9 +543,9 @@ namespace PlatformGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).EndInit();
@@ -576,9 +584,9 @@ namespace PlatformGame
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox horizontalPlatform;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox verticalPlatform;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox enemyOne;
@@ -604,6 +612,7 @@ namespace PlatformGame
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox31;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
 

@@ -21,5 +21,10 @@ namespace PlatformGame
         {
 
         }
+
+        private void MainGameTimerEvent(object sender, EventArgs e)
+        {
+
+        }
     }
 }
