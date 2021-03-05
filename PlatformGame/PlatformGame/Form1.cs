@@ -72,6 +72,15 @@ namespace PlatformGame
             //reset position of player, platform, and enemies
             player.Left = 10;
             player.Top = 692;
+
+            enemyOne.Left = 379;
+
+            enemyTwo.Left = 320;
+
+            horizontalPlatform.Left = 175;
+            verticalPlatform.Top = 507;
+
+            gameTimer.Start();
         }
     }
 }
