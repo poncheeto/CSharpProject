@@ -66,6 +66,9 @@ namespace PlatformGame
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,6 +103,9 @@ namespace PlatformGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -204,7 +210,7 @@ namespace PlatformGame
             // verticalPlatform
             // 
             this.verticalPlatform.BackColor = System.Drawing.Color.Maroon;
-            this.verticalPlatform.Location = new System.Drawing.Point(507, 621);
+            this.verticalPlatform.Location = new System.Drawing.Point(567, 621);
             this.verticalPlatform.Margin = new System.Windows.Forms.Padding(2);
             this.verticalPlatform.Name = "verticalPlatform";
             this.verticalPlatform.Size = new System.Drawing.Size(76, 23);
@@ -491,12 +497,48 @@ namespace PlatformGame
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.MainGameTimerEvent);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox7.Location = new System.Drawing.Point(379, 573);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(171, 23);
+            this.pictureBox7.TabIndex = 30;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "platform";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox9.Location = new System.Drawing.Point(173, 295);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(53, 23);
+            this.pictureBox9.TabIndex = 31;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "platform";
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.BackColor = System.Drawing.Color.Khaki;
+            this.pictureBox32.Location = new System.Drawing.Point(187, 255);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox32.TabIndex = 32;
+            this.pictureBox32.TabStop = false;
+            this.pictureBox32.Tag = "coin";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(654, 761);
+            this.Controls.Add(this.pictureBox32);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox30);
@@ -573,6 +615,9 @@ namespace PlatformGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -615,6 +660,9 @@ namespace PlatformGame
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox31;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox32;
     }
 }
 

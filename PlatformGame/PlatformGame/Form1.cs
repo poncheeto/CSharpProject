@@ -17,7 +17,7 @@ namespace PlatformGame
         int jumpSpeed;
         int force;
         int score = 0;
-        int playerSpeed = 25;
+        int playerSpeed = 7;
 
         int horizontalSpeed = 5;
         int verticalSpeed = 3;
@@ -89,6 +89,23 @@ namespace PlatformGame
             else
             {
                 jumpSpeed = 10;
+            }
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    if ((string)x.Tag == "platform")
+                    {
+                        if (player.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            force = 8;
+                            player.Top = x.Top - player.Height;
+                        }
+
+                        x.BringToFront();
+                    }
+                }
             }
         }
 
