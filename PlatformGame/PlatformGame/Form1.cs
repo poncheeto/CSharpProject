@@ -53,7 +53,25 @@ namespace PlatformGame
 
         private void RestartGame()
         {
+            jumping = false;
+            goLeft = false;
+            goRight = false;
+            isGameOver = false;
+            score = 0;
 
+            txtScore.Text = "Score: " + score;
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && x.Visible == false)
+                {
+                    x.Visible = true;
+                }
+            }
+
+            //reset position of player, platform, and enemies
+            player.Left = 10;
+            player.Top = 692;
         }
     }
 }

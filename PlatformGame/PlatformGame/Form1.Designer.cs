@@ -215,7 +215,7 @@ namespace PlatformGame
             // player
             // 
             this.player.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.player.Location = new System.Drawing.Point(97, 672);
+            this.player.Location = new System.Drawing.Point(10, 692);
             this.player.Margin = new System.Windows.Forms.Padding(2);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(29, 41);
