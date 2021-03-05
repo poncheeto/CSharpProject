@@ -12,6 +12,20 @@ namespace PlatformGame
 {
     public partial class Form1 : Form
     {
+        bool goLeft, goRight, jumping, isGameOver;
+
+        int jumpSpeed;
+        int force;
+        int score = 0;
+        int playerSpeed = 7;
+
+        int horizontalSpeed = 5;
+        int verticalSpeed = 3;
+
+        int enemyOneSpeed = 5;
+        int enemyTwoSpeed = 3;
+
+
         public Form1()
         {
             InitializeComponent();
