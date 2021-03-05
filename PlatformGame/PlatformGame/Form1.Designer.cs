@@ -105,7 +105,7 @@ namespace PlatformGame
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(329, 6);
+            this.txtScore.Location = new System.Drawing.Point(452, 6);
             this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(191, 57);
@@ -117,7 +117,7 @@ namespace PlatformGame
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox1.Location = new System.Drawing.Point(2, 737);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(241, 23);
             this.pictureBox1.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace PlatformGame
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox2.Location = new System.Drawing.Point(251, 672);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(184, 23);
             this.pictureBox2.TabIndex = 2;
@@ -139,7 +139,7 @@ namespace PlatformGame
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox3.Location = new System.Drawing.Point(136, 513);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(107, 23);
             this.pictureBox3.TabIndex = 3;
@@ -150,7 +150,7 @@ namespace PlatformGame
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox4.Location = new System.Drawing.Point(14, 428);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(112, 23);
             this.pictureBox4.TabIndex = 4;
@@ -161,7 +161,7 @@ namespace PlatformGame
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox5.Location = new System.Drawing.Point(251, 366);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(241, 23);
             this.pictureBox5.TabIndex = 5;
@@ -172,7 +172,7 @@ namespace PlatformGame
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox6.Location = new System.Drawing.Point(14, 245);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(112, 23);
             this.pictureBox6.TabIndex = 6;
@@ -183,7 +183,7 @@ namespace PlatformGame
             // 
             this.horizontalPlatform.BackColor = System.Drawing.Color.Maroon;
             this.horizontalPlatform.Location = new System.Drawing.Point(257, 175);
-            this.horizontalPlatform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horizontalPlatform.Margin = new System.Windows.Forms.Padding(2);
             this.horizontalPlatform.Name = "horizontalPlatform";
             this.horizontalPlatform.Size = new System.Drawing.Size(178, 23);
             this.horizontalPlatform.TabIndex = 7;
@@ -194,7 +194,7 @@ namespace PlatformGame
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox8.Location = new System.Drawing.Point(14, 61);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(152, 23);
             this.pictureBox8.TabIndex = 8;
@@ -205,7 +205,7 @@ namespace PlatformGame
             // 
             this.verticalPlatform.BackColor = System.Drawing.Color.Maroon;
             this.verticalPlatform.Location = new System.Drawing.Point(507, 621);
-            this.verticalPlatform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.verticalPlatform.Margin = new System.Windows.Forms.Padding(2);
             this.verticalPlatform.Name = "verticalPlatform";
             this.verticalPlatform.Size = new System.Drawing.Size(76, 23);
             this.verticalPlatform.TabIndex = 9;
@@ -216,7 +216,7 @@ namespace PlatformGame
             // 
             this.player.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.player.Location = new System.Drawing.Point(97, 672);
-            this.player.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.player.Margin = new System.Windows.Forms.Padding(2);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(29, 41);
             this.player.TabIndex = 10;
@@ -532,11 +532,13 @@ namespace PlatformGame
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtScore);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Tag = "platform";
             this.Text = "Platform Game";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyIsDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

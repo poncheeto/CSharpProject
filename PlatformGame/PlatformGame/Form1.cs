@@ -26,5 +26,20 @@ namespace PlatformGame
         {
 
         }
+
+        private void KeyIsDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void KeyIsDown(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void RestartGame()
+        {
+
+        }
     }
 }
