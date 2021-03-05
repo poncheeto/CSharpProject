@@ -17,7 +17,7 @@ namespace PlatformGame
         int jumpSpeed;
         int force;
         int score = 0;
-        int playerSpeed = 7;
+        int playerSpeed = 25;
 
         int horizontalSpeed = 5;
         int verticalSpeed = 3;
@@ -36,19 +36,78 @@ namespace PlatformGame
 
         }
 
+        private void KeyIsUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = false;
+            }
+
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = false;
+            }
+
+            if (e.KeyCode == Keys.Space && jumping == true)
+            {
+                jumping = false;
+            }
+
+            if (e.KeyCode == Keys.Enter && isGameOver == true)
+            {
+                RestartGame();
+            }
+        }
+
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
+            txtScore.Text = "Score: " + score;
 
+            player.Top += jumpSpeed;
+
+            if (goLeft == true)
+            {
+                player.Left -= playerSpeed;
+            }
+
+            if (goRight == true)
+            {
+                player.Left += playerSpeed;
+            }
+
+            if (jumping == true && force < 0)
+            {
+                jumping = false;
+            }
+
+            if (jumping == true)
+            {
+                jumpSpeed = -8;
+                force -= 1;
+            }
+
+            else
+            {
+                jumpSpeed = 10;
+            }
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = true;
+            }
 
-        }
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = true;
+            }
 
-        private void KeyIsDown(object sender, KeyPressEventArgs e)
-        {
-
+            if (e.KeyCode == Keys.Space && jumping == false)
+            {
+                jumping = true;
+            }
         }
 
         private void RestartGame()
