@@ -111,10 +111,10 @@ namespace PlatformGame
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(452, 6);
+            this.txtScore.Location = new System.Drawing.Point(406, 6);
             this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(191, 57);
+            this.txtScore.Size = new System.Drawing.Size(237, 101);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "Score: 0";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.TopRight;
