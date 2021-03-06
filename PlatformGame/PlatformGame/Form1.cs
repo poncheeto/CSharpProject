@@ -106,6 +106,15 @@ namespace PlatformGame
                         x.BringToFront();
                     }
                 }
+
+                if ((string)x.Tag == "coin")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    {
+                        x.Visible = false;
+                        score++; 
+                    }
+                }
             }
         }
 
