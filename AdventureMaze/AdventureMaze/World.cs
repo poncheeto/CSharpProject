@@ -31,5 +31,18 @@ namespace AdventureMaze
                 }
             }
         }
+
+        // Checks if position is walkable for player
+        public bool IsPositionWalkable(int x, int y)
+        {
+            // Check bounds
+            if (x < 0 || y < 0 || x >= Columns || y >= Rows)
+            {
+                return false;
+            }
+
+            // Check if grid is walkable tile
+            return Grid[y, x] == " " || Grid[y, x] == "X";
+        }
     }
 }
