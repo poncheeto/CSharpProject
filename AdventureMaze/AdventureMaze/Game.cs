@@ -6,5 +6,9 @@ namespace AdventureMaze
 {
     class Game
     {
+        public void Start()
+        {
+
+        }
     }
 }
