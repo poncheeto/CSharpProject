@@ -29,11 +29,24 @@ namespace AdventureMaze
             RunGameLoop();
         }
 
+        private void DrawFrame()
+        {
+            Clear();
+            MyWorld.Draw();
+            CurrentPlayer.Draw();
+        }
+
         private void RunGameLoop()
         {
             while(true)
             {
                 // Draw player and maze
+
+                // Check for player input and move player
+
+                // Check if player has reached exit and end game if so
+
+                // Give the console chance to render
                 break;
             }
         }
