@@ -32,6 +32,11 @@ namespace AdventureMaze
             }
         }
 
+        public string GetElementAt(int x, int y)
+        {
+            return Grid[y, x];
+        }
+
         // Checks if position is walkable for player
         public bool IsPositionWalkable(int x, int y)
         {
