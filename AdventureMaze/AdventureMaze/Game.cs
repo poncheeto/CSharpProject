@@ -36,18 +36,41 @@ namespace AdventureMaze
             CurrentPlayer.Draw();
         }
 
+        private void HandlePlayerInput()
+        {
+            ConsoleKeyInfo keyInfo = ReadKey(true);
+            ConsoleKey key = keyInfo.Key;
+            switch (key)
+            {
+                case ConsoleKey.UpArrow:
+                    CurrentPlayer.Y -= 1;
+                    break;
+                case ConsoleKey.DownArrow:
+                    CurrentPlayer.Y += 1;
+                    break;
+                case ConsoleKey.RightArrow:
+                    CurrentPlayer.X += 1;
+                    break;
+                case ConsoleKey.LeftArrow:
+                    CurrentPlayer.X -= 1;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void RunGameLoop()
         {
-            while(true)
+            while (true)
             {
                 // Draw player and maze
-
+                DrawFrame();
                 // Check for player input and move player
-
+                HandlePlayerInput();
                 // Check if player has reached exit and end game if so
 
                 // Give the console chance to render
-                break;
+                System.Threading.Thread.Sleep(20);
             }
         }
     }
