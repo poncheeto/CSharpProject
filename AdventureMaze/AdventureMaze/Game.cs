@@ -7,6 +7,9 @@ namespace AdventureMaze
 {
     class Game
     {
+        private World MyWorld;
+        private Player CurrentPlayer;
+
         public void Start()
         {
             // Assign a maze map to grid
@@ -14,16 +17,25 @@ namespace AdventureMaze
             {
                 { "=", "=", "=", "=", "=", "=", "=" },
                 { "=", " ", "=", " ", " ", " ", "X" },
-                { "O", " ", "=", " ", "=", " ", "=" },
+                { " ", " ", "=", " ", "=", " ", "=" },
                 { "=", " ", "=", " ", "=", " ", "=" },
                 { "=", " ", " ", " ", "=", " ", "=" },
                 { "=", "=", "=", "=", "=", "=", "=" },
             };
-            World myWorld = new World(grid);
-            myWorld.Draw();
+            MyWorld = new World(grid);
 
-            WriteLine("\n\nPress any key to exit...");
-            ReadKey(true);
+            CurrentPlayer = new Player(0, 2);
+
+            RunGameLoop();
+        }
+
+        private void RunGameLoop()
+        {
+            while(true)
+            {
+                // Draw player and maze
+                break;
+            }
         }
     }
 }
