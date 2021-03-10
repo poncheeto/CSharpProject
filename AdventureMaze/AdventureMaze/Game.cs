@@ -12,6 +12,10 @@ namespace AdventureMaze
 
         public void Start()
         {
+
+            Title = "Adventure Maze";
+            CursorVisible = false;
+
             // Assign a maze map to grid
             string[,] grid =
             {
