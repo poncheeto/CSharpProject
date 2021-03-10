@@ -80,7 +80,11 @@ namespace AdventureMaze
                 // Check for player input and move player
                 HandlePlayerInput();
                 // Check if player has reached exit and end game if so
-
+                string elementAtPlayePos = MyWorld.GetElementAt(CurrentPlayer.X, CurrentPlayer.Y);
+                if (elementAtPlayePos == "X")
+                {
+                    break;
+                }
                 // Give the console chance to render
                 System.Threading.Thread.Sleep(20);
             }
