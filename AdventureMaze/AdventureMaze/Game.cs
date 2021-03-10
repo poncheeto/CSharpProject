@@ -43,16 +43,28 @@ namespace AdventureMaze
             switch (key)
             {
                 case ConsoleKey.UpArrow:
-                    CurrentPlayer.Y -= 1;
+                    if(MyWorld.IsPositionWalkable(CurrentPlayer.X, CurrentPlayer.Y - 1))
+                    {
+                        CurrentPlayer.Y -= 1;
+                    }
                     break;
                 case ConsoleKey.DownArrow:
-                    CurrentPlayer.Y += 1;
+                    if (MyWorld.IsPositionWalkable(CurrentPlayer.X, CurrentPlayer.Y + 1))
+                    {
+                        CurrentPlayer.Y += 1;
+                    }
                     break;
                 case ConsoleKey.RightArrow:
-                    CurrentPlayer.X += 1;
+                    if (MyWorld.IsPositionWalkable(CurrentPlayer.X + 1, CurrentPlayer.Y))
+                    {
+                        CurrentPlayer.X += 1;
+                    }
                     break;
                 case ConsoleKey.LeftArrow:
-                    CurrentPlayer.X -= 1;
+                    if (MyWorld.IsPositionWalkable(CurrentPlayer.X - 1, CurrentPlayer.Y))
+                    {
+                        CurrentPlayer.X -= 1;
+                    }
                     break;
                 default:
                     break;
