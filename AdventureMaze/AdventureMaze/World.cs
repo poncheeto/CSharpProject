@@ -27,6 +27,16 @@ namespace AdventureMaze
                 {
                     string element = Grid[y, x];
                     SetCursorPosition(x, y);
+
+                    if (element == "X")
+                    {
+                        ForegroundColor = ConsoleColor.DarkCyan;
+                    }
+                    else
+                    {
+                        ResetColor();
+                    }
+
                     Write(element);
                 }
             }

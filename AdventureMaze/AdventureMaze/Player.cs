@@ -22,7 +22,6 @@ namespace AdventureMaze
             PlayerColor = ConsoleColor.DarkRed;
         }
 
-
         // Draw player
         public void Draw()
         {
