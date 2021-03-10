@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using static System.Console;
-using static System.Threading.Thread;
 
 namespace AdventureMaze
 {
@@ -25,7 +24,7 @@ namespace AdventureMaze
                 { "█", " ", "█", " ", " ", " ", "█", " ", "█", " ", "X" },
                 { "█", " ", "█", " ", "█", " ", "█", " ", " ", " ", "█" },
                 { "█", " ", "█", " ", "█", " ", "█", " ", "█", "█", "█" },
-                { "█", " ", " ", " ", "█", " ", " ", " ", " ", " ", "█"},
+                { "█", " ", " ", " ", "█", " ", " ", " ", " ", " ", "█" },
                 { " ", " ", "█", "█", "█", "█", "█", "█", "█", "█", "█" },
             };
 
@@ -38,7 +37,6 @@ namespace AdventureMaze
 
         private void DrawFrame()
         {
-            Clear();
             MyWorld.Draw();
             CurrentPlayer.Draw();
         }
@@ -82,18 +80,16 @@ namespace AdventureMaze
         {
             while (true)
             {
-                // Draw player and maze
+                // Update player position
                 DrawFrame();
                 // Check for player input and move player
                 HandlePlayerInput();
                 // Check if player has reached exit and end game if so
-                string elementAtPlayePos = MyWorld.GetElementAt(CurrentPlayer.X, CurrentPlayer.Y);
-                if (elementAtPlayePos == "X")
+                string elementAtPlayerPos = MyWorld.GetElementAt(CurrentPlayer.X, CurrentPlayer.Y);
+                if (elementAtPlayerPos == "X")
                 {
                     break;
                 }
-                // Give the console chance to render
-                Sleep(20);
             }
         }
     }
