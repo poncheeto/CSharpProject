@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using static System.Console;
+using static System.Threading.Thread;
 
 namespace AdventureMaze
 {
     class Game
     {
+        // Create variables for objects we will be working with for game
         private World MyWorld;
         private Player CurrentPlayer;
 
@@ -91,7 +93,7 @@ namespace AdventureMaze
                     break;
                 }
                 // Give the console chance to render
-                System.Threading.Thread.Sleep(20);
+                Sleep(20);
             }
         }
     }
