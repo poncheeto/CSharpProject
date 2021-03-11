@@ -44,34 +44,31 @@ namespace AdventureMaze
         private void HandlePlayerInput()
         {
             ConsoleKeyInfo keyInfo = ReadKey(true);
-            ConsoleKey key = keyInfo.Key;
-            switch (key)
+            switch (keyInfo.Key)
             {
                 case ConsoleKey.UpArrow:
-                    if(MyWorld.IsPositionWalkable(CurrentPlayer.X, CurrentPlayer.Y - 1))
+                    if (MyWorld.IsPositionWalkable(CurrentPlayer.X, CurrentPlayer.Y - 1))
                     {
-                        CurrentPlayer.Y -= 1;
+                        CurrentPlayer.MovePlayer(0, -1);
                     }
                     break;
                 case ConsoleKey.DownArrow:
                     if (MyWorld.IsPositionWalkable(CurrentPlayer.X, CurrentPlayer.Y + 1))
                     {
-                        CurrentPlayer.Y += 1;
+                        CurrentPlayer.MovePlayer(0, 1);
                     }
                     break;
                 case ConsoleKey.RightArrow:
                     if (MyWorld.IsPositionWalkable(CurrentPlayer.X + 1, CurrentPlayer.Y))
                     {
-                        CurrentPlayer.X += 1;
+                        CurrentPlayer.MovePlayer(1, 0);
                     }
                     break;
                 case ConsoleKey.LeftArrow:
                     if (MyWorld.IsPositionWalkable(CurrentPlayer.X - 1, CurrentPlayer.Y))
                     {
-                        CurrentPlayer.X -= 1;
+                        CurrentPlayer.MovePlayer(-1, 0);
                     }
-                    break;
-                default:
                     break;
             }
         }
