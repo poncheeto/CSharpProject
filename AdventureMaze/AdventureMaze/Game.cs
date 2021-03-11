@@ -24,23 +24,25 @@ namespace AdventureMaze
                 { "█", " ", "█", " ", " ", " ", "█", " ", "█", " ", "X" },
                 { "█", " ", "█", " ", "█", " ", "█", " ", " ", " ", "█" },
                 { "█", " ", "█", " ", "█", " ", "█", " ", "█", "█", "█" },
-                { "█", " ", " ", " ", "█", " ", " ", " ", " ", " ", "█" },
-                { " ", " ", "█", "█", "█", "█", "█", "█", "█", "█", "█" },
+                { " ", " ", " ", " ", "█", " ", " ", " ", " ", " ", "█" },
+                { "█", "█", "█", "█", "█", "█", "█", "█", "█", "█", "█" },
             };
 
             MyWorld = new World(grid);
 
-            CurrentPlayer = new Player(0, 5);
+            CurrentPlayer = new Player(0, 4);
 
             RunGameLoop();
         }
 
+        // Draw World and Player
         private void DrawFrame()
         {
             MyWorld.Draw();
             CurrentPlayer.Draw();
         }
 
+        // Key input from user will move player if IsPositionWalkable method returns true
         private void HandlePlayerInput()
         {
             ConsoleKeyInfo keyInfo = ReadKey(true);
@@ -73,6 +75,7 @@ namespace AdventureMaze
             }
         }
 
+        // Main game loop to be run in this order
         private void RunGameLoop()
         {
             while (true)

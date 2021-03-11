@@ -5,6 +5,7 @@ using static System.Console;
 
 namespace AdventureMaze
 {
+    // Class will create maze and determine how the player will respond to different characters within the maze.
     class World
     {
         private string[,] Grid;
@@ -42,6 +43,7 @@ namespace AdventureMaze
             }
         }
 
+        // Checks for the element at player's position. Used to check if player reached "X" to exit game
         public string GetElementAt(int x, int y)
         {
             return Grid[y, x];
