@@ -91,6 +91,9 @@ namespace AdventureMaze
                     break;
                 }
             }
+            Clear();
+            WriteLine("You win!");
+            ReadKey(true);
         }
     }
 }
